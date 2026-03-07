@@ -3,7 +3,7 @@ name: Python CI Pipeline
 # This tells GitHub to run this pipeline whenever code is pushed to the main branch
 on:
   push:
-    branches:[ "main" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
