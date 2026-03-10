@@ -18,7 +18,6 @@ The core of this project is the **GitHub Actions CI/CD pipeline**, which strictl
 3. **Continuous Delivery (CD):** Upon successful tests, GitHub Actions builds a multi-stage Docker image and pushes it to Docker Hub.
 4. **Deployment:** Kubernetes pulls the latest image and deploys it across highly available, self-healing Pods exposed via a LoadBalancer.
 
-*(Note to self: Add an Architecture Diagram image here using Draw.io or Excalidraw!)*
 
 ## 🛡️ Enterprise DevOps Practices Implemented
 
