@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logistics-app-deployment
+  labels:
+    app: logistics
+spec:
+  replicas: 2 # Enterprise High Availability: Run 2 copies of the app!
+  selector:
+    matchLabels:
+      app: logistics
+  template:
+    metadata:
+      labels:
+        app: logistics
+    spec:
+      containers:
+      - name: logistics-container
+        image: parth1717/logistics-app:latest 
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8000
+        
+        # Enterprise Best Practice: Self-Healing Probes
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+
+
+# kubectl get pods
+# kubectl get services
+# kubectl get deployments
+# kubectl apply -f k8s/
