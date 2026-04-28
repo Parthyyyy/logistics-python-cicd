@@ -2,15 +2,13 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import Dict
 
-
+# notes to self :
 # Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 # .\venv\Scripts\activate to activate virtual environment
 # to run : uvicorn app.main:app --reload
 
-
 app = FastAPI(title="Logistics API", version="1.0.0")
 
-# Mock database (In-memory dictionary for this project)
 shipments_db: Dict[str, dict] = {}
 
 class Shipment(BaseModel):

@@ -30,7 +30,20 @@ spec:
           periodSeconds: 10
 
 
+
+# notes to self :
 # kubectl get pods
 # kubectl get services
 # kubectl get deployments
 # kubectl apply -f k8s/
+# for aws : ssh -i aws-key.pem ubuntu@13.234.110.174 in the command prompt in the vs code folder window
+
+# sudo systemctl status k3s
+# sudo systemctl restart k3s
+# sudo k3s kubectl get pods
+
+# for refreshing ram : 
+# sudo fallocate -l 1G /swapfile
+# sudo chmod 600 /swapfile
+# sudo mkswap /swapfile
+# sudo swapon /swapfile

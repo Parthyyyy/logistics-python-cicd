@@ -1,7 +1,6 @@
 from fastapi.testclient import TestClient
 from app.main import app
 
-# Create a mock client to send requests to our app without starting a real server
 client = TestClient(app)
 
 def test_health_check():
@@ -21,7 +20,7 @@ def test_create_shipment():
     assert response.json()["message"] == "Shipment created successfully"
 
 def test_get_shipment():
-    # Test tracking the shipment we just created
+    # Test tracking the shipment
     response = client.get("/shipments/SHP001")
     assert response.status_code == 200
     assert response.json()["origin"] == "Mumbai"
