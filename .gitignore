@@ -1,0 +1,32 @@
+# Python Cache & Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+venv/
+env/
+.venv/
+Scripts/
+Lib/
+
+# Secrets & API Keys 
+.env
+.streamlit/secrets.toml
+
+# IDEs & OS Hidden Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs & Databases
+*.log
+*.sqlite3
+*.db
+
+# AI/Data Specific 
+*.csv
+*.json
+models/
